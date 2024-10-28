@@ -37,6 +37,6 @@ app.use('/Edit',Edit);
 app.use('/delete',deleteItems);
 const PORT = process.env.PORT || 1234;
 const HOST = '0.0.0.0'; // or specify a different host if necessary
-app.listen(PORT, () => {
+app.listen(PORT,HOST, () => {
   console.log(`Server connected on ${PORT}`);
 });
