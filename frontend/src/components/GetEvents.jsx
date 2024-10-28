@@ -16,7 +16,7 @@ export default function GetEvents() {
     };
     const handleDelete = async (id) => {
         try {
-            const response = await axios.delete(`http://localhost:1234/delete/${id}`);
+            const response = await axios.delete(`${process.env.REACT_APP_BackendURL}/delete/${id}`);
             console.log(response.data);
             setEvents(events.filter((eventsItem) => eventsItem._id !== id));
         } catch (error) {
@@ -31,7 +31,7 @@ export default function GetEvents() {
             const id = await localStorage.getItem('id');
 
             const response = await
-                axios.get(`http://localhost:1234/getEvents`, { params: { id } });
+                axios.get(`${REACT_APP_BackendURL}/getEvents`, { params: { id } });
             console.log(response);
             setEvents(response.data.response);
         }

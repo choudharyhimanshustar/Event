@@ -37,7 +37,7 @@ const EventForm = () => {
             {data.append(key, formData[key]);}
         }
         try {
-            const response = await axios.post('http://localhost:1234/events', data, {
+            const response = await axios.post(`${process.env.REACT_APP_BackendURL}/events`, data, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

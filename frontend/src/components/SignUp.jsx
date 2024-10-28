@@ -11,7 +11,7 @@ export default function SignUp() {
     const handleSignUP = async () => {
         try {
             const response = await
-                axios.post(`http://localhost:1234/signUp`, {
+                axios.post(`${process.env.REACT_APP_BackendURL}/signUp`, {
                     email: email,
                     fullName: fullName,
                     password: password

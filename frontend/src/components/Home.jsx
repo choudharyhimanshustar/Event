@@ -20,7 +20,7 @@ export default function Home() {
         }
         try {
             const response = await
-                axios.get(`http://localhost:1234`, {
+                axios.get(`${process.env.REACT_APP_BackendURL}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,
 

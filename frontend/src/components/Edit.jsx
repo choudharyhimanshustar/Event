@@ -34,7 +34,7 @@ export default function UpdateMemory() {
             else { data.append(key, formData[key]); }
         }
         try {
-            const response = await axios.put(`http://localhost:1234/edit/${id}`, data, {
+            const response = await axios.put(`${process.env.REACT_APP_BackendURL}/edit/${id}`, data, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
             console.log(response.data);
