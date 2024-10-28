@@ -20,7 +20,7 @@ app.use(fileUpload({
 }));
 
 const corsOptions = {
-  origin: 'https://event-lyart-nine.vercel.app/',
+  origin: 'https://event-lyart-nine.vercel.app',
   credentials: true,
   methods: 'GET,POST,PUT,DELETE,OPTIONS,PATCH',
   allowedHeaders: 'Content-Type,Authorization'
