@@ -18,18 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(fileUpload({
   useTempFiles: true
 }));
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://event-opal-mu.vercel.app');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  
-  // Handle preflight requests
-  if (req.method === 'OPTIONS') {
-    return res.sendStatus(200);
-  }
-  
-  next();
-});
+
 const corsOptions = {
   origin: 'https://event-opal-mu.vercel.app',
   credentials: true,
@@ -38,7 +27,13 @@ const corsOptions = {
   preflightContinue: false
 };
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));
+app.options('*', (req, res) => {
+  console.log(`Received OPTIONS request from origin: ${req.headers.origin}`);
+  res.header('Access-Control-Allow-Origin', corsOptions.origin);
+  res.header('Access-Control-Allow-Methods', corsOptions.methods);
+  res.header('Access-Control-Allow-Headers', corsOptions.allowedHeaders);
+  res.sendStatus(200); // Respond with a 200 status
+});
 
 app.use('/', Home);
 app.use('/login', Login);
