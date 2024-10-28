@@ -31,7 +31,7 @@ export default function GetEvents() {
             const id = await localStorage.getItem('id');
 
             const response = await
-                axios.get(`${REACT_APP_BackendURL}/getEvents`, { params: { id } });
+                axios.get(`${process.env.REACT_APP_BackendURL}/getEvents`, { params: { id } });
             console.log(response);
             setEvents(response.data.response);
         }
