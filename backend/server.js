@@ -23,7 +23,8 @@ const corsOptions = {
   origin: 'https://event-opal-mu.vercel.app',
   credentials: true,
   methods: 'GET,POST,PUT,DELETE,OPTIONS,PATCH',
-  allowedHeaders: 'Content-Type,Authorization'
+  allowedHeaders: 'Content-Type,Authorization',
+  preflightContinue: false
 };
 app.use(cors(corsOptions));
 app.options('*', cors(corsOptions));
