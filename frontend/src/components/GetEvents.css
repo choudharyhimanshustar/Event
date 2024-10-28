@@ -1,0 +1,138 @@
+/* GetEvents.css */
+.Event {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    position: relative;
+    left: 15%;
+}
+
+.events-grid {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    background-color: #233b4f;
+}
+
+.event-block {
+    position: relative;
+    color: #5a95c5;
+    text-align: left;
+    padding: 5%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 55vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.EventCard {
+    width: 25%;
+    margin: 1%;
+}
+
+.event-block:hover {
+    transform: scale(1.05);
+}
+
+.event-date {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.month {
+    font-size: 0.8em;
+}
+
+.day {
+    font-size: 2em;
+}
+
+.event-details {
+    margin-top: 1%;
+}
+
+.event-details button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: larger;
+    position: relative;
+    left: 70%;
+    margin: 1%;
+}
+
+.event-title {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.event-speaker {
+    font-size: 0.9em;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.Banner {
+    text-align: center;
+    background-color: #233b4f;
+    color: #D3D3D3
+}
+
+.BannerImgDiv {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1%;
+}
+
+.BannerImgDivSubDomain {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%
+}
+
+.BannerImgDivSubDomain img {
+    width: 50%;
+    border-radius: 1.5rem;
+    position: relative;
+    left: 25%;
+}
+
+
+.bannerimg:hover {
+    transform: scale(1.1);
+}
+
+.gif {
+    background-color: transparent;
+    width: 50%;
+}
+ 
+@media (max-width:480px)
+{
+    .BannerImgDiv
+    {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        right:5%;
+        height: 40vh;
+    }
+    .BannerImgDivSubDomain 
+    {
+        width: 100%;
+    }
+    .EventCard
+    {
+        width:70%;
+    }
+    .event-block 
+    {
+        height: 40vh;
+    }
+}

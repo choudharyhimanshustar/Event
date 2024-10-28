@@ -1,0 +1,80 @@
+.addIcon {
+    position: relative;
+    left: 40%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+}
+
+.addIcon button {
+    padding: 1% 5%;
+    width: 100%
+}
+.addEventbtn
+{
+    width: 150%;
+    border-radius: 1.5rem;
+    height: 50%;
+    border:none;
+    padding: 5%;
+    cursor: pointer;
+    color:#5a95c5
+}
+
+.HomeMainDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    padding: 1%;
+    background-color: #233b4f;
+    color:#D3D3D3
+}
+
+.HomeBTN
+{
+    display: flex;
+    flex-direction: row;
+    gap:5%
+}
+
+
+
+.searchMemoryDiv h2 {
+    position: relative;
+    bottom: 50%;
+    margin-right: 2%;
+}
+
+.searchMemory {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+/* Add media queries for responsiveness */
+.buttonDiv {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 20%;
+    
+}
+
+.buttonDiv button {
+    padding: 0% 10%;
+}
+
+@media (max-width:480px)
+{
+    .HomeMainDiv
+    {
+        margin-left: 2.5%;
+        margin-right:15%
+    }
+    .addEventbtn
+    {
+        margin-top: 20%;
+    }
+}
