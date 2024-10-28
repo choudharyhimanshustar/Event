@@ -11,7 +11,7 @@ export default function Login() {
         try
         {
             const response=await 
-            axios.post(`${process.env.REACT_APP_BackendURL}4/login`,{
+            axios.post(`${process.env.REACT_APP_BackendURL}/login`,{
                 email:email,
                 password:password
             })
