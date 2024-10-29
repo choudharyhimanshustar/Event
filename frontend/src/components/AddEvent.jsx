@@ -21,7 +21,13 @@ const EventForm = () => {
             [name]: value,
         }));
     };
-
+    const getTodayDate = () => {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0'); // Month is zero-based
+        const day = String(today.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    };
     // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -70,6 +76,7 @@ const EventForm = () => {
                     <input
                         type="date"
                         name="date"
+                        min={getTodayDate()}
                         value={formData.date}
                         onChange={handleChange}
                         required
